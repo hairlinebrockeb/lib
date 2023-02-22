@@ -217,6 +217,9 @@ function azfakefunctions:LoadAzfake()
     function azfakeguifunctions:Text(txt)
         Status.Text = txt
     end
+    function azfakeguifunctions:ChangeTextColour(clr) -- Vector3.new()
+        Status.TextColor3 = clr-- Color3.fromrgb
+    end
     function azfakeguifunctions:HoldPin()
         Pin.Visible = true ;
         task.wait(.1)
