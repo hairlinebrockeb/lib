@@ -1,0 +1,281 @@
+local azfakefunctions = {}
+function azfakefunctions:LoadAzfake()
+
+
+
+
+
+
+
+
+
+    local azfakeguifunctions = {}
+
+
+
+        -- Gui to Lua
+        -- Version: 3.2
+
+
+        -- Gui to Lua
+        -- Version: 3.2
+
+
+
+
+
+
+
+    -- Gui to Lua
+    -- Version: 3.2
+
+    -- Instances:
+
+    local AZFAKELOADER = Instance.new("ScreenGui")
+    local MainFrame = Instance.new("Frame")
+    local OuterFrame = Instance.new("Frame")
+    local InnerFrame = Instance.new("Frame")
+    local Pin = Instance.new("ImageLabel")
+    local bg = Instance.new("ImageLabel")
+    local azfake = Instance.new("TextLabel")
+    local Status = Instance.new("TextLabel")
+    local LoadHolder = Instance.new("Frame")
+    local LoadFrame = Instance.new("Frame")
+
+    --Properties:
+
+    AZFAKELOADER.Name = "AZFAKELOADER"
+    AZFAKELOADER.Parent = game:WaitForChild("CoreGui")
+    AZFAKELOADER.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    AZFAKELOADER.Enabled = false;
+
+    MainFrame.Name = "MainFrame"
+    MainFrame.Parent = AZFAKELOADER
+    MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    MainFrame.BackgroundTransparency = 1.000
+    MainFrame.Position = UDim2.new(0.38650018, 0, 0.193613261, 0)
+    MainFrame.Size = UDim2.new(0.226654157, 0, 0.300047308, 0)
+
+    OuterFrame.Name = "OuterFrame"
+    OuterFrame.Parent = MainFrame
+    OuterFrame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+    OuterFrame.BackgroundTransparency = 0.800
+    OuterFrame.BorderSizePixel = 2
+    OuterFrame.Position = UDim2.new(0.00582595076, 0, 0.010739563, 0)
+    OuterFrame.Size = UDim2.new(0.998019755, 0, 0.989260495, 0)
+
+    InnerFrame.Name = "InnerFrame"
+    InnerFrame.Parent = MainFrame
+    InnerFrame.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+    InnerFrame.BackgroundTransparency = 0.600
+    InnerFrame.BorderSizePixel = 4
+    InnerFrame.Position = UDim2.new(0.0290517695, 0, 0.169565722, 0)
+    InnerFrame.Size = UDim2.new(0.95025754, 0, 0.776807845, 0)
+    InnerFrame.ZIndex = 2
+
+    Pin.Name = "Pin"
+    Pin.Parent = MainFrame
+    Pin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Pin.BackgroundTransparency = 1.000
+    Pin.Position = UDim2.new(0.869668782, 0, -0.0936318561, 0)
+    Pin.Rotation = 45.000
+    Pin.Size = UDim2.new(0.22091575, 0, 0.326728284, 0)
+    Pin.Visible = false
+    Pin.Image = "rbxassetid://480749213"
+
+    bg.Name = "bg"
+    bg.Parent = MainFrame
+    bg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    bg.BackgroundTransparency = 1.000
+    bg.Position = UDim2.new(0.00582595076, 0, 0.010739563, 0)
+    bg.Size = UDim2.new(0.998019755, 0, 0.989260495, 0)
+    bg.Image = "rbxassetid://1326957166"
+
+    azfake.Name = "azfake"
+    azfake.Parent = MainFrame
+    azfake.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    azfake.BackgroundTransparency = 1.000
+    azfake.BorderSizePixel = 0
+    azfake.Position = UDim2.new(0.280884624, 0, 0.0458381213, 0)
+    azfake.Size = UDim2.new(0.446849912, 0, 0.0951192752, 0)
+    azfake.Font = Enum.Font.Unknown
+    azfake.Text = "Azfake Hub V3"
+    azfake.TextColor3 = Color3.fromRGB(255, 255, 255)
+    azfake.TextSize = 27.000
+    azfake.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+    azfake.TextStrokeTransparency = 0.970
+    azfake.TextWrapped = true
+
+    Status.Name = "Status"
+    Status.Parent = MainFrame
+    Status.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Status.BackgroundTransparency = 1.000
+    Status.BorderSizePixel = 0
+    Status.Position = UDim2.new(0.0290517695, 0, 0.348455817, 0)
+    Status.Size = UDim2.new(0.95025754, 0, 0.345496655, 0)
+    Status.Font = Enum.Font.ArialBold
+    Status.Text = "................."
+    Status.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Status.TextSize = 20.000
+    Status.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+    Status.TextStrokeTransparency = 0.970
+    Status.TextWrapped = true
+
+    LoadHolder.Name = "LoadHolder"
+    LoadHolder.Parent = MainFrame
+    LoadHolder.BackgroundColor3 = Color3.fromRGB(106, 255, 6)
+    LoadHolder.BackgroundTransparency = 1.000
+    LoadHolder.BorderSizePixel = 0
+    LoadHolder.Position = UDim2.new(0.0266180467, 0, 0.921086431, 0)
+    LoadHolder.Size = UDim2.new(0.948638618, 0, 0.0272273552, 0)
+    LoadHolder.ZIndex = 5
+
+    LoadFrame.Name = "LoadFrame"
+    LoadFrame.Parent = LoadHolder
+    LoadFrame.BackgroundColor3 = Color3.fromRGB(106, 255, 6)
+    LoadFrame.BorderSizePixel = 0
+    LoadFrame.Position = UDim2.new(0.00257419702, 0, -0.0407650918, 0)
+    LoadFrame.Size = UDim2.new(0, 0, 0.994999886, 0)
+    LoadFrame.ZIndex = 5
+    
+
+    local properies_instances = {
+
+    }
+    AZFAKELOADER.Enabled = false
+
+    
+    for _,v in next, MainFrame:GetChildren() do 
+        if v:IsA('Frame') then 
+            table.insert(properies_instances,{item = v.Name;transparency = v.BackgroundTransparency}) 
+            v.BackgroundTransparency = 1
+        elseif v:IsA('ImageLabel') then 
+            table.insert(properies_instances,{item = v.Name;transparency = v.ImageTransparency}) 
+            v.ImageTransparency = 1
+        elseif v:IsA('TextLabel') then 
+            table.insert(properies_instances,{item = v.Name;transparency = v.TextTransparency}) 
+            v.TextTransparency = 1
+        end
+        for _x,vx in next, v:GetChildren() do 
+            if vx:IsA('Frame') then 
+                table.insert(properies_instances,{item = vx.Name;transparency = vx.BackgroundTransparency}) 
+                vx.BackgroundTransparency = 1
+            elseif v:IsA('ImageLabel') then 
+                table.insert(properies_instances,{item = vx.Name;transparency = vx.ImageTransparency}) 
+                vx.ImageTransparency = 1
+            elseif v:IsA('TextLabel') then 
+                table.insert(properies_instances,{item = vx.Name;transparency = vx.TextTransparency}) 
+                vx.TextTransparency = 1
+            end
+        end 
+
+    end -- could insert the items then tween them
+
+    AZFAKELOADER.Enabled = true;
+    local function getinstance(info)
+        local tablevalue = nil
+        for x,v in next, properies_instances do 
+            if v['item'] == info.instance.Name then 
+                tablevalue = v
+            end
+        end
+        return tablevalue
+    end
+    for _,v in next, MainFrame:GetChildren() do 
+        if v:IsA('Frame') then 
+            local tween = game:GetService('TweenService'):Create(v,TweenInfo.new(1),{BackgroundTransparency = getinstance{instance = v}['transparency']})
+            tween:Play()
+        elseif v:IsA('ImageLabel') then 
+            local tween = game:GetService('TweenService'):Create(v,TweenInfo.new(1),{ImageTransparency = getinstance{instance = v}['transparency']})
+            tween:Play()
+        elseif v:IsA('TextLabel') then 
+            local tween = game:GetService('TweenService'):Create(v,TweenInfo.new(1),{TextTransparency = getinstance{instance = v}['transparency']})
+            tween:Play()
+        end
+        for _x,vx in next, v:GetChildren() do 
+            if vx:IsA('Frame') then 
+                local tween = game:GetService('TweenService'):Create(vx,TweenInfo.new(1),{BackgroundTransparency = getinstance{instance = vx}['transparency']})
+                tween:Play()
+            elseif v:IsA('ImageLabel') then 
+                local tween = game:GetService('TweenService'):Create(vx,TweenInfo.new(1),{ImageTransparency = getinstance{instance = vx}['transparency']})
+                tween:Play()
+            elseif v:IsA('TextLabel') then 
+                local tween = game:GetService('TweenService'):Create(vx,TweenInfo.new(1),{TextTransparency = getinstance{instance = vx}['transparency']})
+                tween:Play()
+            end
+        end 
+    end
+
+    function azfakeguifunctions:Set(info) -- azfakefunctions 
+        local tween = game:GetService('TweenService'):Create(LoadFrame,TweenInfo.new(1),{Size = UDim2.new(
+            info.size,0,
+            LoadFrame.Size.Y.Scale,
+            LoadFrame.Size.Y.Offset
+        )})
+        tween:Play()
+    end
+    function azfakeguifunctions:Text(txt)
+        Status.Text = txt
+    end
+    function azfakeguifunctions:HoldPin()
+        Pin.Visible = true ;
+        task.wait(.1)
+        local rotatetween = game:GetService('TweenService'):Create(MainFrame,TweenInfo.new(1,Enum.EasingStyle.Bounce),{Rotation = -45})
+        rotatetween:Play()
+        task.wait(.5)
+        local rotatetween = game:GetService('TweenService'):Create(MainFrame,TweenInfo.new(1,Enum.EasingStyle.Bounce),{Rotation = -20})
+        rotatetween:Play()
+        task.wait(.5)
+        local rotatetween = game:GetService('TweenService'):Create(MainFrame,TweenInfo.new(.5,Enum.EasingStyle.Bounce),{Rotation = -45})
+        rotatetween:Play()
+        task.wait(.5)
+        local rotatetween = game:GetService('TweenService'):Create(MainFrame,TweenInfo.new(3),{Rotation = -50})
+        rotatetween:Play()
+    end
+    -- if it was azfake functions
+    -- i would have to do LoadAzfake() then run the functions like azfakefunctions:Text()
+    --[[
+        x = req
+        LoadAzfake()
+        x:Text
+        -- it looks like x would wait until there is a gui
+    ]]
+
+
+    task.wait(1)
+    -- azfakefunctions:Set({size = 0.997})
+    -- azfakefunctions:Text('Loading..')
+    -- -- task.wait(1)
+    -- azfakefunctions:HoldPin()
+    -- task.wait(1)
+    -- for _,v in next, MainFrame:GetChildren() do 
+    --     if v:IsA('Frame') then 
+    --         local tween = game:GetService('TweenService'):Create(v,TweenInfo.new(1),{BackgroundTransparency = 1})
+    --         tween:Play()
+    --     elseif v:IsA('ImageLabel') then 
+    --         local tween = game:GetService('TweenService'):Create(v,TweenInfo.new(1),{ImageTransparency = 1})
+    --         tween:Play()
+    --     elseif v:IsA('TextLabel') then 
+    --         local tween = game:GetService('TweenService'):Create(v,TweenInfo.new(1),{TextTransparency = 1})
+    --         tween:Play()
+    --     end
+    --     for _x,vx in next, v:GetChildren() do 
+    --         if vx:IsA('Frame') then 
+    --             local tween = game:GetService('TweenService'):Create(vx,TweenInfo.new(1),{BackgroundTransparency = 1})
+    --             tween:Play()
+    --         elseif v:IsA('ImageLabel') then 
+    --             local tween = game:GetService('TweenService'):Create(vx,TweenInfo.new(1),{ImageTransparency = 1})
+    --             tween:Play()
+    --         elseif v:IsA('TextLabel') then 
+    --             local tween = game:GetService('TweenService'):Create(vx,TweenInfo.new(1),{TextTransparency = 1})
+    --             tween:Play()
+    --         end
+    --     end 
+    -- end
+    -- task.wait(5)
+    -- AZFAKELOADER:Destroy()
+    azfakeguifunctions.main = AZFAKELOADER
+    return azfakeguifunctions
+end
+
+return azfakefunctions
