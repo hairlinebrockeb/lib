@@ -3,13 +3,10 @@ function azfakefunctions:LoadAzfake()
 
     local azfakeguifunctions = {}
 
-    -- Gui to Lua
-    -- Version: 3.2
-
-    -- Instances:
-
     local AZFAKELOADER = Instance.new("ScreenGui")
-    syn.protect_gui(AZFAKELOADER)
+    if syn then 
+        syn.protect_gui(AZFAKELOADER)
+    end
     local MainFrame = Instance.new("Frame")
     local OuterFrame = Instance.new("Frame")
     local InnerFrame = Instance.new("Frame")
@@ -213,6 +210,9 @@ function azfakefunctions:LoadAzfake()
         local rotatetween = game:GetService('TweenService'):Create(MainFrame,TweenInfo.new(3),{Rotation = -50})
         rotatetween:Play()
     end
+    function azfakeguifunctions:Clear(clr) -- Vector3.new()
+        AZFAKELOADER:Destroy()-- Color3.fromrgb
+    end
     -- if it was azfake functions
     -- i would have to do LoadAzfake() then run the functions like azfakefunctions:Text()
     --[[
@@ -255,7 +255,7 @@ function azfakefunctions:LoadAzfake()
     -- end
     -- task.wait(5)
     -- AZFAKELOADER:Destroy()
-    azfakeguifunctions.main = AZFAKELOADER
+    --azfakeguifunctions.main = AZFAKELOADER
     return azfakeguifunctions
 end
 
