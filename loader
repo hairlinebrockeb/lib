@@ -1,30 +1,7 @@
 local azfakefunctions = {}
 function azfakefunctions:LoadAzfake()
 
-
-
-
-
-
-
-
-
     local azfakeguifunctions = {}
-
-
-
-        -- Gui to Lua
-        -- Version: 3.2
-
-
-        -- Gui to Lua
-        -- Version: 3.2
-
-
-
-
-
-
 
     -- Gui to Lua
     -- Version: 3.2
@@ -46,7 +23,7 @@ function azfakefunctions:LoadAzfake()
     --Properties:
 
     AZFAKELOADER.Name = "AZFAKELOADER"
-    AZFAKELOADER.Parent = game:WaitForChild("CoreGui")
+    AZFAKELOADER.Parent = game.CoreGui
     AZFAKELOADER.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     AZFAKELOADER.Enabled = false;
 
@@ -246,7 +223,7 @@ function azfakefunctions:LoadAzfake()
     ]]
 
 
-    task.wait(1)
+    -- task.wait(1)
     -- azfakefunctions:Set({size = 0.997})
     -- azfakefunctions:Text('Loading..')
     -- -- task.wait(1)
@@ -281,5 +258,4 @@ function azfakefunctions:LoadAzfake()
     azfakeguifunctions.main = AZFAKELOADER
     return azfakeguifunctions
 end
-
-return azfakefunctions
+return library
