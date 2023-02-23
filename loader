@@ -258,4 +258,5 @@ function azfakefunctions:LoadAzfake()
     azfakeguifunctions.main = AZFAKELOADER
     return azfakeguifunctions
 end
+
 return azfakefunctions
