@@ -32,6 +32,7 @@ function azfakefunctions:LoadAzfake()
     -- Instances:
 
     local AZFAKELOADER = Instance.new("ScreenGui")
+    syn.protect_gui(AZFAKELOADER)
     local MainFrame = Instance.new("Frame")
     local OuterFrame = Instance.new("Frame")
     local InnerFrame = Instance.new("Frame")
