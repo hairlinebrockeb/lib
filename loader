@@ -3,67 +3,43 @@ function azfakefunctions:LoadAzfake()
 
     local azfakeguifunctions = {}
 
-    local AZFAKELOADER = Instance.new("ScreenGui")
+    local AZFAKELOADERv4 = Instance.new("ScreenGui")
     if syn then 
         syn.protect_gui(AZFAKELOADER)
     end
+    -- Gui to Lua
+    -- Version: 3.2
+
+    -- Instances:
+
+
     local MainFrame = Instance.new("Frame")
-    local OuterFrame = Instance.new("Frame")
-    local InnerFrame = Instance.new("Frame")
-    local Pin = Instance.new("ImageLabel")
     local bg = Instance.new("ImageLabel")
     local azfake = Instance.new("TextLabel")
-    local Status = Instance.new("TextLabel")
-    local LoadHolder = Instance.new("Frame")
-    local LoadFrame = Instance.new("Frame")
+    local OuterFrame = Instance.new("Frame")
+    local load = Instance.new("ImageLabel")
+    local InnerFrame = Instance.new("Frame")
 
     --Properties:
 
-    AZFAKELOADER.Name = "AZFAKELOADER"
-    AZFAKELOADER.Parent = game.CoreGui
-    AZFAKELOADER.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    AZFAKELOADER.Enabled = false;
+    AZFAKELOADERv4.Name = "AZFAKELOADER v4"
+    AZFAKELOADERv4.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    AZFAKELOADERv4.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     MainFrame.Name = "MainFrame"
-    MainFrame.Parent = AZFAKELOADER
+    MainFrame.Parent = AZFAKELOADERv4
     MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     MainFrame.BackgroundTransparency = 1.000
-    MainFrame.Position = UDim2.new(0.38650018, 0, 0.193613261, 0)
+    MainFrame.Position = UDim2.new(0.38650018, 0, 0.269827694, 0)
     MainFrame.Size = UDim2.new(0.226654157, 0, 0.300047308, 0)
-
-    OuterFrame.Name = "OuterFrame"
-    OuterFrame.Parent = MainFrame
-    OuterFrame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-    OuterFrame.BackgroundTransparency = 0.800
-    OuterFrame.BorderSizePixel = 2
-    OuterFrame.Position = UDim2.new(0.00582595076, 0, 0.010739563, 0)
-    OuterFrame.Size = UDim2.new(0.998019755, 0, 0.989260495, 0)
-
-    InnerFrame.Name = "InnerFrame"
-    InnerFrame.Parent = MainFrame
-    InnerFrame.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
-    InnerFrame.BackgroundTransparency = 0.600
-    InnerFrame.BorderSizePixel = 4
-    InnerFrame.Position = UDim2.new(0.0290517695, 0, 0.169565722, 0)
-    InnerFrame.Size = UDim2.new(0.95025754, 0, 0.776807845, 0)
-    InnerFrame.ZIndex = 2
-
-    Pin.Name = "Pin"
-    Pin.Parent = MainFrame
-    Pin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Pin.BackgroundTransparency = 1.000
-    Pin.Position = UDim2.new(0.869668782, 0, -0.0936318561, 0)
-    Pin.Rotation = 45.000
-    Pin.Size = UDim2.new(0.22091575, 0, 0.326728284, 0)
-    Pin.Visible = false
-    Pin.Image = "rbxassetid://480749213"
 
     bg.Name = "bg"
     bg.Parent = MainFrame
     bg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     bg.BackgroundTransparency = 1.000
-    bg.Position = UDim2.new(0.00582595076, 0, 0.010739563, 0)
-    bg.Size = UDim2.new(0.998019755, 0, 0.989260495, 0)
+    bg.BorderColor3 = Color3.fromRGB(255, 255, 255)
+    bg.Position = UDim2.new(0.00582613423, 0, 0.140957355, 0)
+    bg.Size = UDim2.new(0.998019755, 0, 0.859042585, 0)
     bg.Image = "rbxassetid://1326957166"
 
     azfake.Name = "azfake"
@@ -71,53 +47,50 @@ function azfakefunctions:LoadAzfake()
     azfake.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     azfake.BackgroundTransparency = 1.000
     azfake.BorderSizePixel = 0
-    azfake.Position = UDim2.new(0.280884624, 0, 0.0458381213, 0)
+    azfake.Position = UDim2.new(0.280884683, 0, 0.168895632, 0)
     azfake.Size = UDim2.new(0.446849912, 0, 0.0951192752, 0)
+    azfake.ZIndex = 4
     azfake.Font = Enum.Font.Unknown
     azfake.Text = "Azfake Hub V3"
     azfake.TextColor3 = Color3.fromRGB(255, 255, 255)
     azfake.TextSize = 27.000
     azfake.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-    azfake.TextStrokeTransparency = 0.970
+    azfake.TextStrokeTransparency = 0.960
     azfake.TextWrapped = true
 
-    Status.Name = "Status"
-    Status.Parent = MainFrame
-    Status.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Status.BackgroundTransparency = 1.000
-    Status.BorderSizePixel = 0
-    Status.Position = UDim2.new(0.0290517695, 0, 0.348455817, 0)
-    Status.Size = UDim2.new(0.95025754, 0, 0.345496655, 0)
-    Status.Font = Enum.Font.ArialBold
-    Status.Text = "................."
-    Status.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Status.TextSize = 20.000
-    Status.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-    Status.TextStrokeTransparency = 0.970
-    Status.TextWrapped = true
+    OuterFrame.Name = "OuterFrame"
+    OuterFrame.Parent = MainFrame
+    OuterFrame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+    OuterFrame.BackgroundTransparency = 0.800
+    OuterFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+    OuterFrame.BorderSizePixel = 2
+    OuterFrame.Position = UDim2.new(0.00582613423, 0, 0.140957355, 0)
+    OuterFrame.Size = UDim2.new(0.998019755, 0, 0.859042585, 0)
 
-    LoadHolder.Name = "LoadHolder"
-    LoadHolder.Parent = MainFrame
-    LoadHolder.BackgroundColor3 = Color3.fromRGB(106, 255, 6)
-    LoadHolder.BackgroundTransparency = 1.000
-    LoadHolder.BorderSizePixel = 0
-    LoadHolder.Position = UDim2.new(0.0266180467, 0, 0.921086431, 0)
-    LoadHolder.Size = UDim2.new(0.948638618, 0, 0.0272273552, 0)
-    LoadHolder.ZIndex = 5
+    load.Name = "load"
+    load.Parent = MainFrame
+    load.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    load.BackgroundTransparency = 1.000
+    load.Position = UDim2.new(0.429077536, 0, 0.684461415, 0)
+    load.Size = UDim2.new(0.140437186, 0, 0.185644478, 0)
+    load.ZIndex = 5
+    load.Image = "rbxassetid://7126816813"
+    load.ScaleType = Enum.ScaleType.Fit
 
-    LoadFrame.Name = "LoadFrame"
-    LoadFrame.Parent = LoadHolder
-    LoadFrame.BackgroundColor3 = Color3.fromRGB(106, 255, 6)
-    LoadFrame.BorderSizePixel = 0
-    LoadFrame.Position = UDim2.new(0.00257419702, 0, -0.0407650918, 0)
-    LoadFrame.Size = UDim2.new(0, 0, 0.994999886, 0)
-    LoadFrame.ZIndex = 5
-    
+    InnerFrame.Name = "InnerFrame"
+    InnerFrame.Parent = MainFrame
+    InnerFrame.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+    InnerFrame.BackgroundTransparency = 0.600
+    InnerFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+    InnerFrame.BorderSizePixel = 4
+    InnerFrame.Position = UDim2.new(0.00582613423, 0, 0.140957355, 0)
+    InnerFrame.Size = UDim2.new(0.998020113, 0, 0.859042525, 0)
+    InnerFrame.ZIndex = 2
 
     local properies_instances = {
 
     }
-    AZFAKELOADER.Enabled = false
+    AZFAKELOADERv4.Enabled = false
 
     
     for _,v in next, MainFrame:GetChildren() do 
@@ -146,7 +119,7 @@ function azfakefunctions:LoadAzfake()
 
     end -- could insert the items then tween them
 
-    AZFAKELOADER.Enabled = true;
+    AZFAKELOADERv4.Enabled = true;
     local function getinstance(info)
         local tablevalue = nil
         for x,v in next, properies_instances do 
@@ -182,36 +155,42 @@ function azfakefunctions:LoadAzfake()
     end
 
     function azfakeguifunctions:Set(info) -- azfakefunctions 
-        local tween = game:GetService('TweenService'):Create(LoadFrame,TweenInfo.new(1),{Size = UDim2.new(
-            info.size,0,
-            LoadFrame.Size.Y.Scale,
-            LoadFrame.Size.Y.Offset
-        )})
+        -- local tween = game:GetService('TweenService'):Create(LoadFrame,TweenInfo.new(1),{Size = UDim2.new(
+        --     info.size,0,
+        --     LoadFrame.Size.Y.Scale,
+        --     LoadFrame.Size.Y.Offset
+        -- )})
+        -- tween:Play()
+        local tween = game:GetService('TweenService'):Create(load,TweenInfo.new(1),{Rotation = load.Rotation + 90 })
         tween:Play()
     end
     function azfakeguifunctions:Text(txt)
-        Status.Text = txt
+        --Status.Text = txt
+        local tween = game:GetService('TweenService'):Create(load,TweenInfo.new(1),{Rotation = load.Rotation + 90 })
+        tween:Play()
     end
     function azfakeguifunctions:ChangeTextColour(clr) -- Vector3.new()
-        Status.TextColor3 = clr-- Color3.fromrgb
+        --Status.TextColor3 = clr-- Color3.fromrgb
+        local tween = game:GetService('TweenService'):Create(load,TweenInfo.new(0.5),{Rotation = load.Rotation + 90 })
+        tween:Play()
     end
     function azfakeguifunctions:HoldPin()
-        Pin.Visible = true ;
-        task.wait(.1)
-        local rotatetween = game:GetService('TweenService'):Create(MainFrame,TweenInfo.new(1,Enum.EasingStyle.Bounce),{Rotation = -45})
-        rotatetween:Play()
-        task.wait(.5)
-        local rotatetween = game:GetService('TweenService'):Create(MainFrame,TweenInfo.new(1,Enum.EasingStyle.Bounce),{Rotation = -20})
-        rotatetween:Play()
-        task.wait(.5)
-        local rotatetween = game:GetService('TweenService'):Create(MainFrame,TweenInfo.new(.5,Enum.EasingStyle.Bounce),{Rotation = -45})
-        rotatetween:Play()
-        task.wait(.5)
-        local rotatetween = game:GetService('TweenService'):Create(MainFrame,TweenInfo.new(3),{Rotation = -50})
-        rotatetween:Play()
+        -- Pin.Visible = true ;
+        -- task.wait(.1)
+        -- local rotatetween = game:GetService('TweenService'):Create(MainFrame,TweenInfo.new(1,Enum.EasingStyle.Bounce),{Rotation = -45})
+        -- rotatetween:Play()
+        -- task.wait(.5)
+        -- local rotatetween = game:GetService('TweenService'):Create(MainFrame,TweenInfo.new(1,Enum.EasingStyle.Bounce),{Rotation = -20})
+        -- rotatetween:Play()
+        -- task.wait(.5)
+        -- local rotatetween = game:GetService('TweenService'):Create(MainFrame,TweenInfo.new(.5,Enum.EasingStyle.Bounce),{Rotation = -45})
+        -- rotatetween:Play()
+        -- task.wait(.5)
+        -- local rotatetween = game:GetService('TweenService'):Create(MainFrame,TweenInfo.new(3),{Rotation = -50})
+        -- rotatetween:Play()
     end
     function azfakeguifunctions:Clear(clr) -- Vector3.new()
-        AZFAKELOADER:Destroy()-- Color3.fromrgb
+        AZFAKELOADERv4:Destroy()-- Color3.fromrgb
     end
     -- if it was azfake functions
     -- i would have to do LoadAzfake() then run the functions like azfakefunctions:Text()
@@ -260,3 +239,8 @@ function azfakefunctions:LoadAzfake()
 end
 
 return azfakefunctions
+
+--[[
+
+
+]]
