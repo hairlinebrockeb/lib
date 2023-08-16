@@ -161,17 +161,17 @@ function azfakefunctions:LoadAzfake()
         --     LoadFrame.Size.Y.Offset
         -- )})
         -- tween:Play()
-        local tween = game:GetService('TweenService'):Create(load,TweenInfo.new(0.1),{Rotation = load.Rotation + 90 })
+        local tween = game:GetService('TweenService'):Create(load,TweenInfo.new(1),{Rotation = load.Rotation + 500 })
         tween:Play()
     end
     function azfakeguifunctions:Text(txt)
         --Status.Text = txt
-        local tween = game:GetService('TweenService'):Create(load,TweenInfo.new(.1),{Rotation = load.Rotation + 90 })
+        local tween = game:GetService('TweenService'):Create(load,TweenInfo.new(1),{Rotation = load.Rotation + 500 })
         tween:Play()
     end
     function azfakeguifunctions:ChangeTextColour(clr) -- Vector3.new()
         --Status.TextColor3 = clr-- Color3.fromrgb
-        local tween = game:GetService('TweenService'):Create(load,TweenInfo.new(0.5),{Rotation = load.Rotation + 90 })
+        local tween = game:GetService('TweenService'):Create(load,TweenInfo.new(1),{Rotation = load.Rotation + 500 })
         tween:Play()
     end
     function azfakeguifunctions:HoldPin()
