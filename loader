@@ -74,7 +74,7 @@ function azfakefunctions:LoadAzfake()
     load.Position = UDim2.new(0.429077536, 0, 0.684461415, 0)
     load.Size = UDim2.new(0.140437186, 0, 0.185644478, 0)
     load.ZIndex = 5
-    load.Image = "rbxassetid://7126816813"
+    load.Image = '14458862672' --"rbxassetid://7126816813"
     load.ScaleType = Enum.ScaleType.Fit
 
     InnerFrame.Name = "InnerFrame"
