@@ -5,7 +5,7 @@ function azfakefunctions:LoadAzfake()
 
     local AZFAKELOADERv4 = Instance.new("ScreenGui")
     if syn then 
-        syn.protect_gui(AZFAKELOADER)
+        syn.protect_gui(AZFAKELOADERv4)
     end
     -- Gui to Lua
     -- Version: 3.2
